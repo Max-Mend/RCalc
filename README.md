@@ -142,9 +142,5 @@ Perfect for:
 ##  Author
 **Max-Mend**
 
-##  Acknowledgments
-- Built with Rust programming language
-- Inspired by simple CLI calculators
-
 ---
 *Simple, fast, and reliable calculations.*
