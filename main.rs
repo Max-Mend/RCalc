@@ -38,6 +38,7 @@ fn main() {
             "+" => num1 + num2,
             "-" => num1 - num2,
             "*" => num1 * num2,
+            "**" => num1.powf(num2),
             "/" => {
                 if num2 == 0.0 {
                     println!("Error: division by zero!");
