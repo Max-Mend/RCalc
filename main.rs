@@ -1,8 +1,10 @@
 use std::io;
 
 fn main() {
-    println!("------ RCalc ------");
-    println!("For example: 3 + 5");
+    println!("----------- RCalc -----------");
+    println!("Welcome to the RCalc!");
+    println!("By: Max-Mend");
+    println!("For example: 3 + 5 or 4 // 0");
 
     loop {
         let mut input = String::new();
@@ -38,7 +40,6 @@ fn main() {
             "+" => num1 + num2,
             "-" => num1 - num2,
             "*" => num1 * num2,
-            "**" => num1.powf(num2),
             "/" => {
                 if num2 == 0.0 {
                     println!("Error: division by zero!");
@@ -47,6 +48,8 @@ fn main() {
                     num1 / num2
                 }
             }
+            "**" => num1.powf(num2),
+            "//" => num1.sqrt(),
             _ => {
                 println!("Error: Unknown operator");
                 continue;
