@@ -132,13 +132,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Rust** 1.70+ (or latest stable)
 - **rustc** (Rust compiler)
 
-##  Use Cases
-Perfect for:
-- Quick calculations in terminal
-- Learning Rust basics
-- Simple arithmetic tasks
-- Command-line workflows
-
 ##  Author
 **Max-Mend**
 
