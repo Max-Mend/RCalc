@@ -13,6 +13,8 @@ Input is handled using the "io::stdin().read_line()" function.
 - **Subtraction (-)** - Subtract two numbers
 - **Multiplication (*)** - Multiply two numbers
 - **Division (/)** - Divide with zero protection
+- **Power (**)** - Raise to power
+- **Root (//)** - Calculate root
 
 ### Safety
 - **Input Validation** - Checks for correct format
@@ -65,6 +67,12 @@ Result: 28
 
 20 / 4
 Result: 5
+
+2 ** 3
+Result: 8
+
+4 // 0
+Result: 2
 ```
 
 ### Input Format
@@ -89,14 +97,6 @@ Want to modify the calculator? Here's how:
 **Change number precision:**
 ```rust
 let num1: f64 = match parts[0].parse() {  // Try f32 or i32
-```
-
-**Add new operations:**
-```rust
-let res = match operation {
-    "+" => num1 + num2,
-    "^" => num1.powf(num2),  // Power operation
-    "%" => num1 % num2,       // Modulo
 ```
 
 ##  Known Limitations
