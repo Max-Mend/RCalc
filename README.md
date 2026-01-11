@@ -12,17 +12,17 @@ Input is handled using the "io::stdin().read_line()" function.
 - **Addition (+)** - Add two numbers
 - **Subtraction (-)** - Subtract two numbers
 - **Multiplication (*)** - Multiply two numbers
-- **Division (/)** - Divide two numbers with zero protection
+- **Division (/)** - Divide with zero protection
 
 ### Safety
-- **Input Validation** - Ensures correct input format
-- **Error Handling** - Clear error messages for invalid operations
-- **Division by Zero Protection** - Prevents crashes from division errors
+- **Input Validation** - Checks for correct format
+- **Error Handling** - Clear messages for invalid input
+- **Division by Zero Protection** - Prevents crashes
 
 ### Interface
-- **Continuous Loop** - Perform multiple calculations without restarting
-- **Clear Format** - Simple "number operator number" syntax
-- **Instant Results** - Fast calculation and display
+- **Continuous Loop** - Multiple calculations without restarting
+- **Simple Format** - Just "number operator number"
+- **Instant Results** - Quick output
 
 ##  Quick Start
 ### Prerequisites
@@ -43,14 +43,13 @@ sudo pacman -S rust
 
 ### Build from Source
 ```bash
-git clone https://github.com/yourusername/rcalc.git
+git clone https://github.com/Max-Mend/rcalc.git
 cd rcalc
 rustc main.rs -o rcalc
 ./rcalc
 ```
 
 ##  Usage
-### Basic Calculations
 Enter calculations in the format: `number operator number`
 
 **Examples:**
@@ -69,68 +68,58 @@ Result: 5
 ```
 
 ### Input Format
-```
-<number> <operator> <number>
-```
-- **number**: Any floating-point number (e.g., 3, 5.5, -2.7)
-- **operator**: One of: `+`, `-`, `*`, `/`
-- **Format**: Numbers and operator must be separated by spaces
+- **number**: Any floating-point number (3, 5.5, -2.7)
+- **operator**: `+`, `-`, `*`, `/`
+- Numbers and operator must be separated by spaces
 
 ##  Technical Details
 ### Built With
 - **Rust** - Systems programming language
-- **std::io** - Standard input/output library
-- **f64** - Double-precision floating-point numbers
+- **std::io** - Standard input/output
+- **f64** - Double-precision floating-point
 
 ### Architecture
-- Single-file application for simplicity
+- Single-file application
 - Pattern matching for operations
-- Robust error handling with Result types
-
-##  Supported Operations
-Performs **basic arithmetic**:
-- `+` - Addition
-- `-` - Subtraction
-- `*` - Multiplication
-- `/` - Division
+- Error handling with Result types
 
 ##  Customization
-### Change Number Type
-Edit `main.rs` lines 18 and 25:
+Want to modify the calculator? Here's how:
+
+**Change number precision:**
 ```rust
-let num1: f64 = match parts[0].parse() {  // Change f64 to f32 or i32
+let num1: f64 = match parts[0].parse() {  // Try f32 or i32
 ```
 
-### Add New Operations
-Edit `main.rs` line 35:
+**Add new operations:**
 ```rust
 let res = match operation {
     "+" => num1 + num2,
-    "^" => num1.powf(num2),  // Add power operation
-    // Add more operations here
+    "^" => num1.powf(num2),  // Power operation
+    "%" => num1 % num2,       // Modulo
 ```
 
 ##  Known Limitations
-- Only basic arithmetic operations
-- No parentheses support
+- Basic arithmetic only
+- No parentheses
 - No multi-step calculations
-- Requires spaces between numbers and operators
+- Spaces required between input
 - No calculation history
 - No scientific functions
 
 ##  Contributing
-Contributions are welcome! Feel free to:
+Feel free to:
 - Report bugs via Issues
-- Suggest new features
+- Suggest features
 - Submit pull requests
-- Improve documentation
+- Improve docs
 
 ##  License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ##  Requirements
-- **Rust** 1.70+ (or latest stable)
-- **rustc** (Rust compiler)
+- **Rust** 1.70+
+- **rustc** compiler
 
 ##  Author
 **Max-Mend**
