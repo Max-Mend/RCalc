@@ -2,14 +2,39 @@ use std::io;
 
 fn main() {
     println!("----------- RCalc -----------");
-    println!("Welcome to the RCalc!");
-    println!("By: Max-Mend");
-    println!("For example: 3 + 5 or 4 // 0");
 
     loop {
         let mut input = String::new();
         io::stdin().read_line(&mut input).unwrap();
         let input = input.trim();
+
+        if input == "help" {
+            println!("Commands:");
+            println!("-- Calc operation --");
+            println!("  number + number");
+            println!("  number - number");
+            println!("  number * number");
+            println!("  number / number");
+            println!("  number ** number   (power)");
+            println!("  number // number(0)   (sqrt of first)");
+            println!("-- Command --");
+            println!("  info");
+            println!("  exit");
+            continue;
+        }
+
+        if input == "info" {
+            println!("Name app: RCalc");
+            println!("Made in Rust");
+            println!("Version: {}", 1.0);
+            println!("Author: Max-Mend");
+            continue;
+        }
+
+
+        if input == "exit" {
+            break;
+        }
 
         let parts: Vec<&str> = input.split_whitespace().collect();
 
