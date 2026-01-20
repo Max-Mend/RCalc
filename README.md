@@ -1,6 +1,8 @@
 # RCalc
 A terminal-based calculator with TUI written in Rust.
 
+![image](photo/1.png)
+
 ## Libraries Used
 ```rust
 ratatui
